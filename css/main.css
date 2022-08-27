@@ -1,0 +1,743 @@
+* {margin:0;padding:0;}
+li {list-style: none;}
+/* body {background-color: #f4f4f4;} */
+img {width: 100%;display: block;}
+a {text-decoration: none;color: #284662;}
+
+#outer_header {
+    position:relative;
+    background-color: rgba(28,46,62,0.8);
+}
+.header {
+    display: flex;
+}
+.fixed {
+    position:fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    z-index: 9999;
+    margin: 0 auto;
+    width: 100%;
+}
+.ham_btn {
+    color: white;
+    margin: 0 20px;
+    font-size: 1.5rem;
+    line-height: 60px;
+    z-index: 9999;
+}
+.close_btn {display: none;}
+.gnb {display: none;}
+.header_res {display: none;}
+
+.logo{
+    width: 240px;
+    margin-left: calc(50% - 180px);
+}
+.ham_menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: none;
+    padding-top: 20px;
+}
+.ham_menu>li {
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.fixed .ham_menu>li {
+    background-color: white;
+    color: black;
+    font-weight: normal;
+}
+.sub_menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: #284662;
+    color: white;
+    margin-left: 10px;
+    display: none;
+}
+.ham_menu ul {
+    padding-top: 10px;
+}
+.sub_menu li {
+    margin: 10px 0;
+    padding:5px 20px;
+    border: none;
+    font-size: 1rem;
+}
+.on_ham, .fixed .ham_menu .on_ham {
+    background-color: #284662;
+    color: white;
+    transition: 0.2s;
+    transition-delay: 0.3s;
+}
+/*----------------- visual_main ---------------*/
+.visual_main {
+    position:relative;
+    top: 0;
+    height: 0;
+    padding-bottom: 56.25%;
+    z-index: -9999;
+}
+
+.visual_main iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.belt {
+    padding-top:30px;
+}
+.belt_img {
+    width: 100px;
+    margin:0 auto;
+}
+
+/*-------------- facilities --------------*/
+.facilities {
+    padding-bottom: 30px;
+}
+.title {
+    padding: 30px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.fac01,.fac03 {
+    display: flex;
+}
+.fac02,.fac04 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.fac_img,
+.fac_txt {
+    width: 50%;
+}
+.fac_txt {
+    text-align: center;
+}
+.fac_txt h3 {
+    font-size: 1rem;
+    margin: 8% 0;
+}
+.fac_txt p {
+    font-size: 0.8rem;
+    width: 90%;
+    margin: 0 auto;
+}
+/*-------------- service -------------*/
+.belt02 {
+    background-color: #f4f4f4;
+}
+.ser_res_bg {
+    padding-bottom: 30px;
+    background-color: #f4f4f4;
+}
+.serv {
+    width: 100%;
+}
+.service_txt {
+    width: 100%;
+    margin: 0 auto;
+}
+.service_txt h3 {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+.service_txt p {
+    width: 100%;
+}
+.service_btn {
+    width: 40%;
+    padding: 5px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #284662;
+    color: white;
+}
+.reservation {
+    position: relative;
+}
+.res_txt_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.res_txt {
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    color:white;
+}
+.res_txt h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.res_txt p {
+    width: 60%;
+    margin: 5% auto;
+}
+.res_btn {
+    width: 30%;
+    padding: 8px;
+    border: 1px solid white;box-sizing: border-box;
+    margin: 0 auto;
+    text-align: center;
+}
+/*---------------- enjoy --------------*/
+.enjoy {
+    padding-bottom: 30px;
+}
+.enjoy_btn {
+    display: flex;
+    margin-bottom: 20px;
+}
+.enjoy label {
+    display: inline-block;
+    width: calc(33.333333% - 4px);
+    margin:20px 0;
+    text-align: center;
+    color: #aaa;
+}
+.food_btn {
+    border-left: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    box-sizing: border-box;
+}
+.fun {
+    text-align: center;
+}
+.fun h3 {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+.fun p {
+    margin: 20px 0;
+}
+.fun_more_btn div {
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    background-color: #284662;
+    color: white;
+    margin: 0 auto;
+}
+.fun03_wrap, .fun04_wrap,
+.fun05_wrap, .fun06_wrap,
+.fun_open02, .fun_close {display: none;}
+
+.food {
+    text-align: center;
+}
+.food h3 {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+.food p {
+    margin: 20px 0;
+}
+.food_more_btn div {
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    background-color: #284662;
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.fun_txt, .food_txt, .event_txt {
+    margin: 0 auto;
+    width: 100%;
+}
+.food03_wrap, .food04_wrap,
+.food05_wrap, .food06_wrap,
+.food_open02, .food_close {display: none;}
+
+.event {
+    text-align: center;
+}
+.event h3 {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+.event p {
+    margin: 20px 0;
+}
+.event_more_btn div {
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+    background-color: #284662;
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.event03_wrap, .event04_wrap,
+.event05_wrap, .event06_wrap,
+.event_open02, .event_close {display: none;}
+
+.fun_contents, .food_contents, .event_contents {display: none;}
+
+#enjoy_btn01,#enjoy_btn02, #enjoy_btn03 {display: none;}
+
+#enjoy_btn01:checked ~ .fun_btn {color: #284662;font-weight: bold;}
+#enjoy_btn01:checked ~ .fun_contents {display: block;}
+#enjoy_btn02:checked ~ .food_btn {color: #284662;font-weight: bold;}
+#enjoy_btn02:checked ~ .food_contents {display: block;}
+#enjoy_btn03:checked ~ .event_btn {color: #284662;font-weight: bold;}
+#enjoy_btn03:checked ~ .event_contents {display: block;}
+
+/*----------------- location -----------------*/
+.belt04 {
+    background-color: #f4f4f4;
+}
+.location_bg {
+    background-color: #f4f4f4;
+}
+.location iframe {
+    height: 250px;
+    margin-bottom: 100px;
+}
+
+/*----------------- footer ----------------*/
+.outer_footer {
+    background-color: #333;
+    color: #ccc;
+    font-size: 0.7rem;
+}
+.inner_footer li {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 3px;
+}
+.footer_logo {
+    width: 180px;
+    margin:0 auto;
+}
+.inner_footer li:first-child {
+    border-bottom: 1px solid #666;
+    margin-bottom: 10px;
+}
+.inner_footer li:last-child {
+    border-top: 1px solid #666;
+    margin-top: 7px;
+    padding: 10px 0;
+}
+.top_btn {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #284662;
+    color: white;
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    display: none;
+}
+/*---------------- media query ----------------*/
+@media all and (min-width:500px) {
+    .ham_menu li {
+        font-size: 1.5rem;
+    }
+    .sub_menu li {
+        font-size: 1.2rem;
+        margin-left: 30px;
+    }
+    .fac_txt h3 {
+        margin: 10% 0;
+    }
+    .fac_txt p {
+        width: 70%;
+    }
+    .bx-wrapper .bx-controls-direction a {
+        top:35%;
+    }
+}
+@media all and (min-width:768px) {
+    .title {
+        font-size: 2rem;
+        padding: 50px 0;
+    }
+    .visual_main {
+        top:-60px;
+    }
+    .belt_img {
+        width: 130px;
+    }
+    .fac {
+        margin-bottom: 10px;
+    }
+    .fac_img {
+        width: 60%;
+    }
+    .fac_txt {
+        width: 40%;
+    }
+    .fac_txt h3 {
+        margin: 20% 0;
+        font-size: 1.2rem;
+    }
+    .fac_txt p {
+        width: 70%;
+        font-size: 1rem;
+    }
+    .serv {
+        display: flex;
+    }
+    .service_img {
+        width: 100%;
+        margin-right: 40px;
+    }
+    .service_txt h3 {
+        margin-top: 25%;
+    }
+    .service_txt p {
+        margin: 10% 0;
+        width: 90%;
+    }
+    .bx-wrapper .bx-controls-direction a {
+        margin: 0 20px;
+    }
+    .res_txt h3 {
+        font-size: 1.5rem;
+    }
+    .res_txt p {
+        width: 50%;
+        margin: 10% auto;
+        font-size: 1.2rem;
+    }
+    .res_btn {
+        width: 20%;
+    }
+    .enjoy label {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }    
+    .fun, .food, .event {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .fun_img, .food_img, .event_img {
+        width: 50%;
+    }
+    .fun_txt_wrap, .food_txt_wrap, .event_txt_wrap {
+        width: 50%;
+    }
+    .fun_txt, .food_txt, .event_txt {
+        display: block;
+    }
+    .fun h3, .food h3, .event h3 {
+        margin: 10% 0;
+    }
+    .fun p, .food p, .event p{
+        margin-top: 10%;
+    }
+    .location iframe {
+        height: 400px;
+    }
+    .top_btn {
+        bottom: 50px;
+        right: 50px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 0.8rem;
+    }
+}
+@media all and (min-width:1024px) {
+    .header {
+        height: 90px;
+        margin: 0 auto;
+    }
+    .ham_btn {
+        display: none;
+    }
+    .logo {
+        width: 150px;
+        height: auto;
+        margin: 10px 0 0 30px;
+    }
+    .header_res {
+        display: block;
+        margin:25px
+    }
+    .gnb {
+        margin: 0 auto;
+        display: flex;
+        cursor: pointer;
+    }
+    .gnb li {
+        position: relative;
+        color: white;
+        padding: 0 15px;
+        font-weight: bold;
+        line-height: 90px;
+    }
+    .gnb_menu {
+        position:absolute;
+        top:90px;
+        left:-50px;
+        color: white;
+        text-align: center;
+        display: none;
+    }
+    .gnb_menu li {
+        width: 120%;
+        height: 20px;
+        padding: 15px 20px;
+        background-color: #284662;
+        border-bottom: 1px solid #666;
+        font-weight: normal;
+        line-height: 20px;
+    }
+    .gnb_menu01 {
+        left:-42px;
+    }
+    .gnb_menu02 {
+        left:-70px;
+    }
+    .on_gnb {
+        color: black;
+    }
+    .on_gnb ul li:hover {
+        background-color: white;
+        color: black;
+    }
+    .header_res {
+        width: 150px;
+    }
+    .visual_main {
+        top:-90px;
+    }
+    .facilities {
+        display: block;
+    }
+    .fac_top,
+    .fac_bot {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 480px;
+        overflow: hidden;
+    }
+    .fac_img {
+        overflow: hidden;
+    }
+    .fac_img:hover img {
+        transform: scale(1.2);
+        transition: 0.3s;
+    }
+    .fac_txt h3 {
+        margin: 30px 0;
+    }
+    .fac_txt p {
+        margin-top: 0;
+    }
+    .fac {
+        display: block;
+        width: 502px;
+    }
+    .fac01 {
+        position: absolute;
+        top: 100%;
+        margin-right: 20px;
+    }
+    .fac02 {
+        position: absolute;
+        top: 100%;
+        left: 522px;
+    }
+    .fac03 {
+        position: absolute;
+        top: 100%;
+        margin-right: 20px;
+    }
+    .fac04 {
+        position: absolute;
+        top: 100%;
+        left: 522px;
+    }
+    .fac04 {
+        margin-right: 0;
+    }
+    .fac div {
+        width: 100%;
+    }
+    .ser_res_wrap {
+        display: flex;
+        margin-top: 30px;
+    }
+    .service {
+        width: 70%;
+    }
+    .service_img {
+        margin-left: 5px;
+    }
+    .service_txt h3 {
+        margin-top: 30px;
+    }
+    .service_txt p {
+        margin: 30px 0;
+    }
+    .reservation {
+        width: 30%;
+        height: 100%;
+        margin-top: 140px
+    }
+    .res_txt_bg {
+        height: 100%;
+    }
+    .res_txt p {
+        width: 80%;
+        font-size: 1rem;
+    }
+    .res_btn {
+        width: 40%;
+    }
+    .res_btn:hover {
+        background-color: white;
+        color: black;
+        transition: 0.5s;
+    }
+    .enjoy label {
+        font-size: 1.3rem;
+        margin-bottom: 40px;
+    }
+    .enjoy a {
+        color: white;
+    }
+    .fun_top, .fun_bot {
+        display: flex;
+    }
+    .fun,.fun03_wrap, .fun04_wrap, .fun05_wrap, .fun06_wrap {
+        display: block;
+        position: relative;
+        width: calc(33.333333% - 6.666666px);
+    }
+    .fun03, .fun04, .fun05, .fun06 {
+        width: 100%;
+    }
+    .fun01, .fun02, .fun04_wrap, .fun05_wrap {
+        margin-right: 10px;
+    }
+    .fun_img {
+        width: 100%;
+        overflow: hidden;
+    }
+    .fun_txt_wrap, .food_txt_wrap, .event_txt_wrap {
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.7);
+        color: white;
+        display: none;
+    }
+    .enjoy i {
+        color: white;
+    }
+    .fun_txt_wrap h3,
+    .fun_txt_wrap p {
+        margin: 45px 0;
+    }
+    .food_top, .food_bot {
+        display: flex;
+    }
+    .food,.food03_wrap,.food04_wrap,.food05_wrap,.food06_wrap {
+        display: block;
+        position: relative;
+        width: calc(33.333333% - 6.666666px);
+    }
+    .food03, .food04, .food05, .food06 {
+        width: 100%;
+    }
+    .food01, .food02, .food04_wrap, .food05_wrap {
+        margin-right: 10px;
+    }
+    .food_img {
+        width: 100%;
+        overflow: hidden;
+    }
+    .food_txt_wrap {
+        width: 100%;
+    }
+    .food_txt_wrap h3,
+    .food_txt_wrap p {
+        margin: 45px 0;
+    }
+    
+    .event_top, .event_bot {
+        display: flex;
+    }
+    .event,.event03_wrap,.event04_wrap,.event05_wrap,.event06_wrap {
+        display: block;
+        position: relative;
+        width: calc(33.333333% - 6.666666px);
+    }
+    .event03, .event04, .event05, .event06 {
+        width: 100%;
+    }
+    .event01, .event02, .event04_wrap, .event05_wrap {
+        margin-right: 10px;
+    }
+    .event_img {
+        width: 100%;
+        overflow: hidden;
+    }
+    .event_txt_wrap {
+        width: 100%;
+    }
+    .event_txt_wrap h3,
+    .event_txt_wrap p {
+        margin: 45px 0;
+    }
+
+    .fun_more_btn,.food_more_btn, .event_more_btn {
+        display: none;
+    }
+    .location iframe {
+        height: 500px;
+    }
+    .facilities, .ser_res_wrap, .enjoy, .location {
+        width: 1024px;
+        margin: 0 auto;
+    }
+    .top_btn {
+        bottom: 100px;
+        right: 100px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1rem;
+    }
+    
+    @media all and (min-width:1280px) {
+        .header {width: 1280px;}
+    }
+}
